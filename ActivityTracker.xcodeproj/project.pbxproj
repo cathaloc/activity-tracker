@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B937A3021DDB98F500734833 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = B937A3011DDB98F500734833 /* Session.swift */; };
+		B937A3071DDB9FD200734833 /* MagicalRecord.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B937A3061DDB9FD200734833 /* MagicalRecord.framework */; };
 		B9ED8B121DDA5AD10011FE25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ED8B111DDA5AD10011FE25 /* AppDelegate.swift */; };
 		B9ED8B151DDA5AD10011FE25 /* ActivityTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B9ED8B131DDA5AD10011FE25 /* ActivityTracker.xcdatamodeld */; };
 		B9ED8B171DDA5AD10011FE25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9ED8B161DDA5AD10011FE25 /* Assets.xcassets */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B937A3011DDB98F500734833 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		B937A3061DDB9FD200734833 /* MagicalRecord.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MagicalRecord.framework; path = Carthage/Build/Mac/MagicalRecord.framework; sourceTree = SOURCE_ROOT; };
 		B9ED8B0E1DDA5AD10011FE25 /* ActivityTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActivityTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9ED8B111DDA5AD10011FE25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9ED8B141DDA5AD10011FE25 /* ActivityTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ActivityTracker.xcdatamodel; sourceTree = "<group>"; };
@@ -29,16 +33,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B937A3071DDB9FD200734833 /* MagicalRecord.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B937A3031DDB9F1900734833 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B937A3061DDB9FD200734833 /* MagicalRecord.framework */,
+			);
+			name = Frameworks;
+			path = ActivityTracker;
+			sourceTree = "<group>";
+		};
 		B9ED8B051DDA5AD10011FE25 = {
 			isa = PBXGroup;
 			children = (
 				B9ED8B101DDA5AD10011FE25 /* ActivityTracker */,
+				B937A3031DDB9F1900734833 /* Frameworks */,
 				B9ED8B0F1DDA5AD10011FE25 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -60,6 +75,7 @@
 				B9ED8B1B1DDA5AD10011FE25 /* Info.plist */,
 				B9ED8B131DDA5AD10011FE25 /* ActivityTracker.xcdatamodeld */,
 				B9ED8B211DDA65580011FE25 /* StatusMenuController.swift */,
+				B937A3011DDB98F500734833 /* Session.swift */,
 			);
 			path = ActivityTracker;
 			sourceTree = "<group>";
@@ -136,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B937A3021DDB98F500734833 /* Session.swift in Sources */,
 				B9ED8B221DDA65580011FE25 /* StatusMenuController.swift in Sources */,
 				B9ED8B121DDA5AD10011FE25 /* AppDelegate.swift in Sources */,
 				B9ED8B151DDA5AD10011FE25 /* ActivityTracker.xcdatamodeld in Sources */,
@@ -253,6 +270,11 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 3W4QL7F769;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ActivityTracker",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = ActivityTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cathaloc.ActivityTracker;
@@ -268,6 +290,11 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 3W4QL7F769;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ActivityTracker",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = ActivityTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cathaloc.ActivityTracker;
@@ -295,6 +322,7 @@
 				B9ED8B201DDA5AD10011FE25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
