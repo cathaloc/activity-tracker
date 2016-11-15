@@ -11,6 +11,7 @@
 		B9ED8B151DDA5AD10011FE25 /* ActivityTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B9ED8B131DDA5AD10011FE25 /* ActivityTracker.xcdatamodeld */; };
 		B9ED8B171DDA5AD10011FE25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9ED8B161DDA5AD10011FE25 /* Assets.xcassets */; };
 		B9ED8B1A1DDA5AD10011FE25 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9ED8B181DDA5AD10011FE25 /* MainMenu.xib */; };
+		B9ED8B221DDA65580011FE25 /* StatusMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ED8B211DDA65580011FE25 /* StatusMenuController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		B9ED8B161DDA5AD10011FE25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9ED8B191DDA5AD10011FE25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		B9ED8B1B1DDA5AD10011FE25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9ED8B211DDA65580011FE25 /* StatusMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusMenuController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				B9ED8B181DDA5AD10011FE25 /* MainMenu.xib */,
 				B9ED8B1B1DDA5AD10011FE25 /* Info.plist */,
 				B9ED8B131DDA5AD10011FE25 /* ActivityTracker.xcdatamodeld */,
+				B9ED8B211DDA65580011FE25 /* StatusMenuController.swift */,
 			);
 			path = ActivityTracker;
 			sourceTree = "<group>";
@@ -133,6 +136,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9ED8B221DDA65580011FE25 /* StatusMenuController.swift in Sources */,
 				B9ED8B121DDA5AD10011FE25 /* AppDelegate.swift in Sources */,
 				B9ED8B151DDA5AD10011FE25 /* ActivityTracker.xcdatamodeld in Sources */,
 			);
@@ -246,6 +250,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 3W4QL7F769;
 				INFOPLIST_FILE = ActivityTracker/Info.plist;
@@ -260,6 +265,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 3W4QL7F769;
 				INFOPLIST_FILE = ActivityTracker/Info.plist;
