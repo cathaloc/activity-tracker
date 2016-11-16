@@ -13,6 +13,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     
     func applicationDidFinishLaunching(_ notification: Notification) {
+        setupCoreDataStack
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B937A3021DDB98F500734833 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = B937A3011DDB98F500734833 /* Session.swift */; };
 		B937A3071DDB9FD200734833 /* MagicalRecord.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B937A3061DDB9FD200734833 /* MagicalRecord.framework */; };
+		B937A30C1DDBAAFF00734833 /* ActivityTracker-Bridging-Header.h in Sources */ = {isa = PBXBuildFile; fileRef = B937A30B1DDBA9D700734833 /* ActivityTracker-Bridging-Header.h */; };
 		B9ED8B121DDA5AD10011FE25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ED8B111DDA5AD10011FE25 /* AppDelegate.swift */; };
 		B9ED8B151DDA5AD10011FE25 /* ActivityTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B9ED8B131DDA5AD10011FE25 /* ActivityTracker.xcdatamodeld */; };
 		B9ED8B171DDA5AD10011FE25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9ED8B161DDA5AD10011FE25 /* Assets.xcassets */; };
@@ -19,12 +20,13 @@
 /* Begin PBXFileReference section */
 		B937A3011DDB98F500734833 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		B937A3061DDB9FD200734833 /* MagicalRecord.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MagicalRecord.framework; path = Carthage/Build/Mac/MagicalRecord.framework; sourceTree = SOURCE_ROOT; };
+		B937A30B1DDBA9D700734833 /* ActivityTracker-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ActivityTracker-Bridging-Header.h"; path = "ActivityTracker/ActivityTracker-Bridging-Header.h"; sourceTree = "<group>"; };
 		B9ED8B0E1DDA5AD10011FE25 /* ActivityTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActivityTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9ED8B111DDA5AD10011FE25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9ED8B141DDA5AD10011FE25 /* ActivityTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ActivityTracker.xcdatamodel; sourceTree = "<group>"; };
-		B9ED8B161DDA5AD10011FE25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B9ED8B161DDA5AD10011FE25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ActivityTracker/Assets.xcassets; sourceTree = "<group>"; };
 		B9ED8B191DDA5AD10011FE25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		B9ED8B1B1DDA5AD10011FE25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9ED8B1B1DDA5AD10011FE25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ActivityTracker/Info.plist; sourceTree = "<group>"; };
 		B9ED8B211DDA65580011FE25 /* StatusMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusMenuController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -49,11 +51,23 @@
 			path = ActivityTracker;
 			sourceTree = "<group>";
 		};
+		B937A3091DDBA7A200734833 /* Misc. */ = {
+			isa = PBXGroup;
+			children = (
+				B937A30B1DDBA9D700734833 /* ActivityTracker-Bridging-Header.h */,
+				B9ED8B131DDA5AD10011FE25 /* ActivityTracker.xcdatamodeld */,
+				B9ED8B1B1DDA5AD10011FE25 /* Info.plist */,
+				B9ED8B161DDA5AD10011FE25 /* Assets.xcassets */,
+			);
+			name = Misc.;
+			sourceTree = "<group>";
+		};
 		B9ED8B051DDA5AD10011FE25 = {
 			isa = PBXGroup;
 			children = (
 				B9ED8B101DDA5AD10011FE25 /* ActivityTracker */,
 				B937A3031DDB9F1900734833 /* Frameworks */,
+				B937A3091DDBA7A200734833 /* Misc. */,
 				B9ED8B0F1DDA5AD10011FE25 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,10 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				B9ED8B111DDA5AD10011FE25 /* AppDelegate.swift */,
-				B9ED8B161DDA5AD10011FE25 /* Assets.xcassets */,
 				B9ED8B181DDA5AD10011FE25 /* MainMenu.xib */,
-				B9ED8B1B1DDA5AD10011FE25 /* Info.plist */,
-				B9ED8B131DDA5AD10011FE25 /* ActivityTracker.xcdatamodeld */,
 				B9ED8B211DDA65580011FE25 /* StatusMenuController.swift */,
 				B937A3011DDB98F500734833 /* Session.swift */,
 			);
@@ -152,6 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B937A30C1DDBAAFF00734833 /* ActivityTracker-Bridging-Header.h in Sources */,
 				B937A3021DDB98F500734833 /* Session.swift in Sources */,
 				B9ED8B221DDA65580011FE25 /* StatusMenuController.swift in Sources */,
 				B9ED8B121DDA5AD10011FE25 /* AppDelegate.swift in Sources */,
@@ -279,6 +291,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cathaloc.ActivityTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ActivityTracker/ActivityTracker-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -299,6 +312,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cathaloc.ActivityTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ActivityTracker/ActivityTracker-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -333,7 +347,8 @@
 				B9ED8B141DDA5AD10011FE25 /* ActivityTracker.xcdatamodel */,
 			);
 			currentVersion = B9ED8B141DDA5AD10011FE25 /* ActivityTracker.xcdatamodel */;
-			path = ActivityTracker.xcdatamodeld;
+			name = ActivityTracker.xcdatamodeld;
+			path = ActivityTracker/ActivityTracker.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
