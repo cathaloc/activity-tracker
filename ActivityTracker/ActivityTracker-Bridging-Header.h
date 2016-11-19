@@ -1,5 +1,5 @@
 //
-//  Header.h
+//  Bridging header...
 //  ActivityTracker
 //
 //  Created by Cathal O Cuimin on 15/11/2016.
@@ -9,8 +9,7 @@
 #ifndef Header_h
 #define Header_h
 
-#define MR_SHORTHAND
-#import <CoreData+MagicalRecord.h>
+#import <MagicalRecord/MagicalRecord.h>
 
 
 #endif /* Header_h */

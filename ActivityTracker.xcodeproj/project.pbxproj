@@ -7,27 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B937A3021DDB98F500734833 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = B937A3011DDB98F500734833 /* Session.swift */; };
-		B937A3071DDB9FD200734833 /* MagicalRecord.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B937A3061DDB9FD200734833 /* MagicalRecord.framework */; };
 		B937A30C1DDBAAFF00734833 /* ActivityTracker-Bridging-Header.h in Sources */ = {isa = PBXBuildFile; fileRef = B937A30B1DDBA9D700734833 /* ActivityTracker-Bridging-Header.h */; };
+		B9E800D21DE09FC300E7D5DA /* MenuBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E800D11DE09FC300E7D5DA /* MenuBarController.swift */; };
+		B9E800D61DE0A3A000E7D5DA /* MagicalRecord.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B937A3061DDB9FD200734833 /* MagicalRecord.framework */; };
+		B9E800D71DE0A3A400E7D5DA /* MagicalRecord.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B937A3061DDB9FD200734833 /* MagicalRecord.framework */; };
+		B9E800D81DE0A3A400E7D5DA /* MagicalRecord.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B937A3061DDB9FD200734833 /* MagicalRecord.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B9E800DB1DE0ABAD00E7D5DA /* SessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E800DA1DE0ABAD00E7D5DA /* SessionService.swift */; };
 		B9ED8B121DDA5AD10011FE25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ED8B111DDA5AD10011FE25 /* AppDelegate.swift */; };
 		B9ED8B151DDA5AD10011FE25 /* ActivityTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B9ED8B131DDA5AD10011FE25 /* ActivityTracker.xcdatamodeld */; };
 		B9ED8B171DDA5AD10011FE25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9ED8B161DDA5AD10011FE25 /* Assets.xcassets */; };
 		B9ED8B1A1DDA5AD10011FE25 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9ED8B181DDA5AD10011FE25 /* MainMenu.xib */; };
-		B9ED8B221DDA65580011FE25 /* StatusMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ED8B211DDA65580011FE25 /* StatusMenuController.swift */; };
+		B9ED8B221DDA65580011FE25 /* SleepWakeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ED8B211DDA65580011FE25 /* SleepWakeController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B9E800D91DE0A3A400E7D5DA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B9E800D81DE0A3A400E7D5DA /* MagicalRecord.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		B937A3011DDB98F500734833 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		B937A3061DDB9FD200734833 /* MagicalRecord.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MagicalRecord.framework; path = Carthage/Build/Mac/MagicalRecord.framework; sourceTree = SOURCE_ROOT; };
 		B937A30B1DDBA9D700734833 /* ActivityTracker-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ActivityTracker-Bridging-Header.h"; path = "ActivityTracker/ActivityTracker-Bridging-Header.h"; sourceTree = "<group>"; };
+		B9E800CB1DE099D100E7D5DA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		B9E800D11DE09FC300E7D5DA /* MenuBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuBarController.swift; sourceTree = "<group>"; };
+		B9E800DA1DE0ABAD00E7D5DA /* SessionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionService.swift; sourceTree = "<group>"; };
 		B9ED8B0E1DDA5AD10011FE25 /* ActivityTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActivityTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9ED8B111DDA5AD10011FE25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9ED8B141DDA5AD10011FE25 /* ActivityTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ActivityTracker.xcdatamodel; sourceTree = "<group>"; };
 		B9ED8B161DDA5AD10011FE25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ActivityTracker/Assets.xcassets; sourceTree = "<group>"; };
 		B9ED8B191DDA5AD10011FE25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		B9ED8B1B1DDA5AD10011FE25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ActivityTracker/Info.plist; sourceTree = "<group>"; };
-		B9ED8B211DDA65580011FE25 /* StatusMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusMenuController.swift; sourceTree = "<group>"; };
+		B9ED8B211DDA65580011FE25 /* SleepWakeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SleepWakeController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,7 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B937A3071DDB9FD200734833 /* MagicalRecord.framework in Frameworks */,
+				B9E800D71DE0A3A400E7D5DA /* MagicalRecord.framework in Frameworks */,
+				B9E800D61DE0A3A000E7D5DA /* MagicalRecord.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +65,7 @@
 		B937A3031DDB9F1900734833 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B9E800CB1DE099D100E7D5DA /* CoreData.framework */,
 				B937A3061DDB9FD200734833 /* MagicalRecord.framework */,
 			);
 			name = Frameworks;
@@ -60,6 +81,31 @@
 				B9ED8B161DDA5AD10011FE25 /* Assets.xcassets */,
 			);
 			name = Misc.;
+			sourceTree = "<group>";
+		};
+		B9E800CD1DE09EB500E7D5DA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B9ED8B211DDA65580011FE25 /* SleepWakeController.swift */,
+				B9E800D11DE09FC300E7D5DA /* MenuBarController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		B9E800CF1DE09EC300E7D5DA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B9ED8B181DDA5AD10011FE25 /* MainMenu.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		B9E800D01DE09EE700E7D5DA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B9E800DA1DE0ABAD00E7D5DA /* SessionService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		B9ED8B051DDA5AD10011FE25 = {
@@ -84,9 +130,9 @@
 			isa = PBXGroup;
 			children = (
 				B9ED8B111DDA5AD10011FE25 /* AppDelegate.swift */,
-				B9ED8B181DDA5AD10011FE25 /* MainMenu.xib */,
-				B9ED8B211DDA65580011FE25 /* StatusMenuController.swift */,
-				B937A3011DDB98F500734833 /* Session.swift */,
+				B9E800CD1DE09EB500E7D5DA /* Controllers */,
+				B9E800CF1DE09EC300E7D5DA /* Views */,
+				B9E800D01DE09EE700E7D5DA /* Services */,
 			);
 			path = ActivityTracker;
 			sourceTree = "<group>";
@@ -101,6 +147,7 @@
 				B9ED8B0A1DDA5AD10011FE25 /* Sources */,
 				B9ED8B0B1DDA5AD10011FE25 /* Frameworks */,
 				B9ED8B0C1DDA5AD10011FE25 /* Resources */,
+				B9E800D91DE0A3A400E7D5DA /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -163,11 +210,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9E800DB1DE0ABAD00E7D5DA /* SessionService.swift in Sources */,
 				B937A30C1DDBAAFF00734833 /* ActivityTracker-Bridging-Header.h in Sources */,
-				B937A3021DDB98F500734833 /* Session.swift in Sources */,
-				B9ED8B221DDA65580011FE25 /* StatusMenuController.swift in Sources */,
+				B9ED8B221DDA65580011FE25 /* SleepWakeController.swift in Sources */,
 				B9ED8B121DDA5AD10011FE25 /* AppDelegate.swift in Sources */,
 				B9ED8B151DDA5AD10011FE25 /* ActivityTracker.xcdatamodeld in Sources */,
+				B9E800D21DE09FC300E7D5DA /* MenuBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -25,7 +25,7 @@
             </items>
             <point key="canvasLocation" x="30.5" y="165.5"/>
         </menu>
-        <customObject id="hID-9T-jdr" userLabel="StatusMenuController" customClass="StatusMenuController" customModule="ActivityTracker" customModuleProvider="target">
+        <customObject id="hID-9T-jdr" userLabel="MenuBarController" customClass="MenuBarController" customModule="ActivityTracker" customModuleProvider="target">
             <connections>
                 <outlet property="statusMenu" destination="6iK-lL-Jrf" id="2x1-Xp-951"/>
             </connections>
