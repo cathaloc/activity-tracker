@@ -8,19 +8,30 @@
 
 import Foundation
 
-class MenuBarController : NSObject {
+class MenuBarController : NSObject, NSMenuDelegate {
+    
     
     @IBOutlet weak var statusMenu: NSMenu!
     
     let statusItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
     
+    var currentSessionMenuItem : NSMenuItem?
+    var previousSessionMenuItem : NSMenuItem?
+    
+
+    
+//    MARK: - IB Actions
+
     @IBAction func quitClicked(_ sender: NSMenuItem) {
         NSApplication.shared().terminate(self)
     }
     
+//    MARK: - Setup
+    
     override func awakeFromNib() {
         setupIcon()
         setupNotifications()
+        self.statusMenu.delegate = self;
     }
     
     private func setupIcon() {
@@ -30,25 +41,49 @@ class MenuBarController : NSObject {
         statusItem.menu = statusMenu
     }
     
-    private func showPreviousSession() {
-        let session = SessionService.findLastSession()
-        if session == nil { return }
+    private func updateSessionDetails() {
+        let existingSession = SessionService.findExistingSession()
+        let prevSession = SessionService.findLastSession()
         
-        let sessionString = "\(session!.startTime!) -> \(session!.endTime!)"
+        if existingSession != nil {
+            let curSessionDate = existingSession!.startTime!
+            let currSessionTitle = "Session started \(curSessionDate.timeAgoSinceNow()!.lowercased())"
+            
+            if currentSessionMenuItem == nil {
+                currentSessionMenuItem = NSMenuItem.init(title: currSessionTitle, action: nil, keyEquivalent: "")
+                statusMenu.insertItem(currentSessionMenuItem!, at: 0)
+            } else {
+                currentSessionMenuItem!.title = currSessionTitle
+            }
+        }
         
-        let menuItem = NSMenuItem.init(title: sessionString, action: nil, keyEquivalent: "TODO")
-        menuItem.isEnabled = true
+        if prevSession != nil {
+            let prevSessionTitle = "\(prevSession!.startTime!) -> \(prevSession!.endTime!)"
+            
+            if previousSessionMenuItem == nil {
+                previousSessionMenuItem = NSMenuItem.init(title: prevSessionTitle, action: nil, keyEquivalent: "")
+                statusMenu.insertItem(previousSessionMenuItem!, at: 1)
+            } else {
+                previousSessionMenuItem!.title = prevSessionTitle
+            }
+        }
         
-        statusMenu.addItem(menuItem)
+
     }
     
+//    MARK: - Menu Delegate Methods
+    
+    func menuWillOpen(_ menu: NSMenu) {
+        updateSessionDetails()
+    }
+    
+//    MARK: - Notifications
+    
     @objc private func mrReady(notification :NSNotification) {
-        showPreviousSession()
+        updateSessionDetails()
     }
     
     private func setupNotifications() {
-        NotificationCenter.default.post(name: NSNotification.Name("MR_ready"), object: nil)
-
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(mrReady),

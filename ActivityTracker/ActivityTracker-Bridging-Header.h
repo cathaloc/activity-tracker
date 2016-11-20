@@ -10,6 +10,7 @@
 #define Header_h
 
 #import <MagicalRecord/MagicalRecord.h>
+#import <DateTools/DateTools.h>
 
 
 #endif /* Header_h */

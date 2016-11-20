@@ -14,13 +14,14 @@ import Foundation
 
 class SessionService : NSObject {
     
+    static var currentSession :NSDate? //will be used as a cache TODO
+    
     static func startNewSession() {
         print("Creating new session")
         var session = findExistingSession()
         
         if session != nil {
             print("WARNING - Attempted to create a new session, but one already exists.")
-            printStackTrace()
             return
         }
         
@@ -36,7 +37,6 @@ class SessionService : NSObject {
         
         if session == nil {
             print("WARNING - Attempted to finish a session, but none exists.")
-            printStackTrace()
             return
         }
         
@@ -65,7 +65,7 @@ class SessionService : NSObject {
     
     static func findLastSession() -> Session? {
         return Session.mr_findFirst(with: NSPredicate(
-            format: "endTime != NULL AND isCurrent == true"),
+            format: "endTime != NULL AND isCurrent == false"),
             sortedBy: "endTime",
             ascending: false
         )
@@ -80,7 +80,6 @@ class SessionService : NSObject {
             for s in sessions {
                 print("WARNING - \t Start: \(s.startTime), End: \(s.endTime), isCurrent: \(s.isCurrent)")
             }
-            printStackTrace()
         }
     }
     

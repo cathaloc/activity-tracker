@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		466E8EB5D525CD91078FB4D9 /* Pods_ActivityTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC9EF2C87494E17CEBC0D47 /* Pods_ActivityTracker.framework */; };
 		B937A30C1DDBAAFF00734833 /* ActivityTracker-Bridging-Header.h in Sources */ = {isa = PBXBuildFile; fileRef = B937A30B1DDBA9D700734833 /* ActivityTracker-Bridging-Header.h */; };
 		B9E800D21DE09FC300E7D5DA /* MenuBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E800D11DE09FC300E7D5DA /* MenuBarController.swift */; };
 		B9E800D61DE0A3A000E7D5DA /* MagicalRecord.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B937A3061DDB9FD200734833 /* MagicalRecord.framework */; };
@@ -35,6 +36,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		00D6A5438E39CADFEC42B2A6 /* Pods-ActivityTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ActivityTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ActivityTracker/Pods-ActivityTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		5EBAD05C168467EDE8736CA3 /* Pods-ActivityTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ActivityTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-ActivityTracker/Pods-ActivityTracker.release.xcconfig"; sourceTree = "<group>"; };
+		8CC9EF2C87494E17CEBC0D47 /* Pods_ActivityTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ActivityTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B937A3061DDB9FD200734833 /* MagicalRecord.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MagicalRecord.framework; path = Carthage/Build/Mac/MagicalRecord.framework; sourceTree = SOURCE_ROOT; };
 		B937A30B1DDBA9D700734833 /* ActivityTracker-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ActivityTracker-Bridging-Header.h"; path = "ActivityTracker/ActivityTracker-Bridging-Header.h"; sourceTree = "<group>"; };
 		B9E800CB1DE099D100E7D5DA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -56,6 +60,7 @@
 			files = (
 				B9E800D71DE0A3A400E7D5DA /* MagicalRecord.framework in Frameworks */,
 				B9E800D61DE0A3A000E7D5DA /* MagicalRecord.framework in Frameworks */,
+				466E8EB5D525CD91078FB4D9 /* Pods_ActivityTracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +72,7 @@
 			children = (
 				B9E800CB1DE099D100E7D5DA /* CoreData.framework */,
 				B937A3061DDB9FD200734833 /* MagicalRecord.framework */,
+				8CC9EF2C87494E17CEBC0D47 /* Pods_ActivityTracker.framework */,
 			);
 			name = Frameworks;
 			path = ActivityTracker;
@@ -115,6 +121,7 @@
 				B937A3031DDB9F1900734833 /* Frameworks */,
 				B937A3091DDBA7A200734833 /* Misc. */,
 				B9ED8B0F1DDA5AD10011FE25 /* Products */,
+				FDCC9D229FEBCC863E19F139 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,6 +144,15 @@
 			path = ActivityTracker;
 			sourceTree = "<group>";
 		};
+		FDCC9D229FEBCC863E19F139 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				00D6A5438E39CADFEC42B2A6 /* Pods-ActivityTracker.debug.xcconfig */,
+				5EBAD05C168467EDE8736CA3 /* Pods-ActivityTracker.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,10 +160,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B9ED8B1E1DDA5AD10011FE25 /* Build configuration list for PBXNativeTarget "ActivityTracker" */;
 			buildPhases = (
+				02D96A994EB0A8E6297AAE5B /* [CP] Check Pods Manifest.lock */,
 				B9ED8B0A1DDA5AD10011FE25 /* Sources */,
 				B9ED8B0B1DDA5AD10011FE25 /* Frameworks */,
 				B9ED8B0C1DDA5AD10011FE25 /* Resources */,
 				B9E800D91DE0A3A400E7D5DA /* Embed Frameworks */,
+				F70255F57BEC5CEDE354DE9D /* [CP] Embed Pods Frameworks */,
+				5D43CE8763FCFB393674091E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -204,6 +223,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		02D96A994EB0A8E6297AAE5B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5D43CE8763FCFB393674091E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ActivityTracker/Pods-ActivityTracker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F70255F57BEC5CEDE354DE9D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ActivityTracker/Pods-ActivityTracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B9ED8B0A1DDA5AD10011FE25 /* Sources */ = {
@@ -325,6 +392,7 @@
 		};
 		B9ED8B1F1DDA5AD10011FE25 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00D6A5438E39CADFEC42B2A6 /* Pods-ActivityTracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
@@ -346,6 +414,7 @@
 		};
 		B9ED8B201DDA5AD10011FE25 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EBAD05C168467EDE8736CA3 /* Pods-ActivityTracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";

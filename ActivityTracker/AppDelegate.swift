@@ -15,10 +15,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationDidFinishLaunching(_ notification: Notification) {
         MagicalRecord.setupCoreDataStack()
+        SessionService.startNewSession()
         
         NotificationCenter.default.post(name: NSNotification.Name("MR_ready"), object: nil)
 
-        SessionService.startNewSession()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
